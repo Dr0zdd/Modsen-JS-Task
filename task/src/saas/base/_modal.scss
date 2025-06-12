@@ -1,0 +1,48 @@
+@use "../components/mixin";
+@use "../abstract/constants";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  min-width: 364px;
+  max-width: 400px;
+  max-height: 514px;
+  overflow: auto;
+}
+
+.modal__img {
+  width: 400px;
+  height: 228px;
+  background: constants.$color-content-background;
+}
+
+.modal__header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content__container {
+  margin: 20px 20px 0 20px;
+}
+
+.modal__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  cursor: pointer;
+}
+
+.modal__close-icon svg {
+  pointer-events: none;
+}

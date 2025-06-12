@@ -1,0 +1,93 @@
+@use "../components/mixin";
+@use "../abstract/constants";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+h1 {
+  @include mixin.font(6.4rem, 100%, 700, 0, none);
+}
+
+.search__input {
+  @include mixin.font(1.6rem, 100%, 500, 0, none);
+  color: constants.$color-search-text;
+  font-family: Arrial, serif;
+}
+
+.footer__title {
+  @include mixin.font(2rem, 1.8rem, 400, 0.03em);
+  color: constants.$color-orange-primary;
+}
+
+.footer__text {
+  @include mixin.font(1.4rem, 2.2rem, 400, 0, none);
+  color: constants.$color-footer;
+}
+
+
+.footer__text-list {
+  @include mixin.font(2rem, 1.9rem, 400, 0, none);
+  color: constants.$color-footer;
+}
+
+h3 {
+  @include mixin.font(2.4rem, 100%, 400, 0, none);
+  color: constants.$color-text;
+}
+
+h4 {
+  @include mixin.font(1.2rem, 1.56rem, 600, 0.05em);
+  //color: $color-static-white;
+}
+
+p {
+  @include mixin.font(1.6rem, 2.368rem, 400, 0, none)
+}
+
+.action__large {
+  @include mixin.font(2.4rem, 3.648rem, 600, 0.16em)
+}
+
+.action-small {
+  @include mixin.font(1.2rem, 1.8rem, 600, 0.05em)
+}
+
+.caption {
+  @include mixin.font(24px, 36px, 400, 0.05em, none, Allura);
+  //color: $color-static-white;
+}
+
+.slider-text {
+  @include mixin.font(80px, 100px, 600, 0.02em);
+}
+
+a {
+  text-decoration: none;
+  color: constants.$color-dark;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
