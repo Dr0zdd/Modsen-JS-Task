@@ -1,3 +1,5 @@
+import { API_KEY } from './config.js';
+
 export async function fetchImages(query) {
     const API_URL = `https://api.unsplash.com/search/photos?query=${query}&client_id=${API_KEY}&per_page=12`;
 
