@@ -1,0 +1,14 @@
+@use "../components/mixin";
+
+
+.layout-5-column {
+  @include mixin.columns($width: 20%);
+}
+
+.layout-4-column {
+  @include mixin.columns($width: 25%);
+}
+
+.layout-2-column {
+  @include mixin.columns($width: 50%);
+}

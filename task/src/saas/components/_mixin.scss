@@ -1,0 +1,74 @@
+@use "../abstract/constants";
+
+@mixin font ($size, $height, $weight: 600, $letter-spacing: 0, $text-transform: uppercase, $font-family: Roboto) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $letter-spacing;
+  text-transform: $text-transform;
+  font-family: $font-family;
+}
+
+@mixin columns ($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  >* {
+    flex-basis: $width;
+    flex-grow: 1;
+  }
+}
+
+@mixin media-width {
+  @media (max-width: constants.$content-width) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: constants.$laptop-width) {
+    @content;
+  }
+}
+
+@mixin media-small-laptop {
+  @media (max-width: constants.$small-laptop-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: constants.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-small-tablet {
+  @media (max-width: constants.$small-tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile-large {
+  @media (max-width: constants.$mobile-large-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: constants.$mobile-big-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile-medium {
+  @media (max-width: constants.$mobile-medium-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile-small {
+  @media (max-width: constants.$mobile-small-width) {
+    @content;
+  }
+}
