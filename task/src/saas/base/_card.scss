@@ -1,0 +1,49 @@
+@use "../components/mixin";
+@use "../abstract/constants";
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 147px;
+}
+
+.card__wrapper {
+  max-width: 1053px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 26px;
+
+  @include mixin.media-small-tablet {
+    gap: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.card__item {
+  background: constants.$color-content-background;
+  cursor: pointer;
+  flex: 0 1 auto;
+  margin: 10px;
+}
+
+.card__img {
+  object-fit: cover;
+  max-width: 310px;
+  max-height: 342px;
+  width: 100%;
+}
+
+@include mixin.media-small-tablet {
+  .card__img {
+    width: 347px;
+    align-items: center;
+  }
+}
+
+@include mixin.media-mobile {
+  .card__img {
+    height: 180px;
+  }
+}

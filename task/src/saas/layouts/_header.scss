@@ -1,0 +1,26 @@
+@use "../components/mixin";
+
+.header {
+  width: 100%;
+  height: 109px;
+  background: linear-gradient(to right, rgba(52, 51, 51, 1), rgba(72, 72, 72, 1), rgba(40, 40, 40, 1));
+}
+
+.header__wrapper {
+  max-width: 1149px;
+  max-height: 80px;
+  padding: 21px 146px 8px 145px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mixin.media-tablet {
+    padding: 0 8px;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

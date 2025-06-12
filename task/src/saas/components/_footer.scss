@@ -1,0 +1,129 @@
+@use "../abstract/constants";
+@use "../components/mixin";
+
+.footer {
+  width: 100%;
+  margin-top: 60px;
+  padding: 80px 0;
+  background: linear-gradient(to right, constants.$color-content-footer-background);
+
+  @include mixin.media-mobile-large {
+    padding: 33px 0;
+  }
+}
+
+.footer__wrapper {
+  width: 100%;
+  max-width: 1250px;
+  margin-left: 95px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include mixin.media-small-tablet {
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+
+  @include mixin.media-small-laptop {
+    flex-wrap: wrap;
+  }
+
+  @include mixin.media-mobile-large {
+    margin-left: 60px;
+  }
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+  margin-right: 85.6px;
+  flex: 0 1 auto;
+  align-items: flex-start;
+  text-align: left;
+
+  @include mixin.media-small-laptop {
+    width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__column {
+  min-width: 339px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  @include mixin.media-laptop {
+    flex-wrap: wrap;
+  }
+
+  @include mixin.media-tablet {
+    align-items: flex-start;
+  }
+
+  @include mixin.media-mobile-large {
+    display: block;
+  }
+}
+
+.footer__title {
+  margin-bottom: 26px;
+
+  @include mixin.media-mobile-large {
+    display: inline;
+  }
+}
+
+.footer__list {
+  margin-bottom: 20px;
+}
+
+.footer__text-list {
+  padding-right: 85.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 26px;
+
+  @include mixin.media-small-laptop {
+    margin-bottom: 20px;
+    padding-right: 40px;
+  }
+
+  &:first-child {
+    max-width: 267px;
+    justify-content: flex-start;
+  }
+
+  @include mixin.media-mobile-large {
+    display: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    flex: 1 1 auto;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__icon {
+  margin-right: 12px;
+}
+
+.footer__extra {
+  padding: 30px 0 30px 75px;
+  text-align: left;
+
+  @include mixin.media-mobile-large {
+    padding: 70px 0 0 22px;
+    text-align: center;
+  }
+}
