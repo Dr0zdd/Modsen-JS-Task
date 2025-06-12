@@ -8,9 +8,19 @@
 /dataSources.local.xml
 
 *.png
-*.svg
-
-*.iml
 *.xml
 
-*/node_modules
+# Игнорируем node_modules
+node_modules/
+
+# Игнорируем IDE-файлы
+*.iml
+modules.xml
+vcs.xml
+watcherTasks.xml
+
+# Игнорируем локальный конфиг
+task/src/js/config.js
+
+task/src/img/[1-12].svg
+
