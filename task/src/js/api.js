@@ -6,7 +6,7 @@ export async function fetchImages(query) {
     try {
         const response = await fetch(API_URL);
         if (!response.ok) {
-            console.error(`Ошибка: ${response.status}`); // Логируем ошибку вместо throw
+            console.error(`Ошибка: ${response.status}`);
             return [];
         }
 
