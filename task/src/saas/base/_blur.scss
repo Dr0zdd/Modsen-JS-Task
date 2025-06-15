@@ -1,0 +1,6 @@
+@use "../abstract/placeholder";
+
+.blurred {
+  filter: blur(8px);
+  @extend %transition;
+}
