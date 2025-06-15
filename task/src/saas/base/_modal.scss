@@ -99,6 +99,7 @@
   border: none;
   cursor: pointer;
   padding: 12px;
+  background-size: contain;
   @extend %transition;
 
   @include mixin.media-tablet {
