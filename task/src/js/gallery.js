@@ -8,25 +8,34 @@ async function loadGallery(query = 'nature') {
         apiImages = await fetchImages(query);
         renderImages(apiImages);
     } catch (error) {
-        console.error('Error loading images', error);
+        console.error('Ошибка загрузки изображений:', error);
     }
 }
 
-function renderImages(images) {
+export async function getApiImages() {
+    return apiImages.length ? apiImages : await fetchImages('nature'); // Возвращает загруженные или запрашивает новые изображения
+}
+
+export function renderImages(images) {
     const gallery = document.querySelector('.card__wrapper');
     if (!gallery) return;
 
-    gallery.innerHTML = images.map((image, index) => `
-        <article class="card__item" data-index="${index}">
-            <img class="card__img" src="${image.urls.regular}" alt="${image.alt_description}">
-        </article>
-    `).join('');
+    gallery.innerHTML = images.length
+        ? images.map((image, index) => `
+            <article class="card__item" data-id="${image.id}" data-index="${index + 1}"> 
+                <img class="card__img" src="${image.urls.regular}" alt="${image.alt_description || 'Без описания'}">
+            </article>
+        `).join('')
+        : '<p class="no-results">Изображения не найдены</p>'; // Показываем сообщение при пустом списке
 }
 
-function openModal(currentIndex) {
+function openModal(imageId) {
     if (!apiImages.length) return;
 
     document.querySelector('.modal')?.remove();
+
+    const currentIndex = apiImages.findIndex(img => img.id === imageId);
+    if (currentIndex === -1) return; // Защита от ошибки
 
     const modal = new ImageSliderModal(apiImages.map(img => img.urls.regular), currentIndex);
     modal.buildModal();
@@ -42,8 +51,10 @@ function openModal(currentIndex) {
 }
 
 document.querySelector('.card__wrapper')?.addEventListener('click', (e) => {
-    const image = e.target.closest('.card__img');
-    if (image) openModal(parseInt(image.parentElement.dataset.index));
+    const card = e.target.closest('.card__item');
+    if (card) {
+        openModal(card.dataset.id); // Передаём ID изображения для поиска
+    }
 });
 
 document.addEventListener('DOMContentLoaded', loadGallery);
