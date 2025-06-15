@@ -10,6 +10,10 @@
   @include mixin.media-mobile-large {
     padding: 33px 0;
   }
+
+  @include mixin.media-mobile {
+    margin-top: 0;
+  }
 }
 
 .footer__wrapper {

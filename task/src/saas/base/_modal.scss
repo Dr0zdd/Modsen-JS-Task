@@ -1,48 +1,126 @@
+@use "../abstract/placeholder";
 @use "../components/mixin";
-@use "../abstract/constants";
 
-.overlay {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.8);
+  @extend %transition;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content {
+  width: 1097px;
+  height: 537px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modal {
+.modal__img-wrapper {
   position: relative;
-  min-width: 364px;
-  max-width: 400px;
-  max-height: 514px;
-  overflow: auto;
+  display: inline-block;
 }
 
 .modal__img {
-  width: 400px;
-  height: 228px;
-  background: constants.$color-content-background;
+  width: 724px;
+  height: 537px;
+  object-fit: cover;
+  @extend %transition;
+
+  @include mixin.media-small-laptop {
+    width: 507px;
+    height: 376px;
+  }
+
+  @include mixin.media-tablet {
+    width: 435px;
+    height: 322px;
+  }
+
+  @include mixin.media-mobile-large {
+    width: 325px;
+    height: 250px;
+  }
+
+  @include mixin.media-mobile {
+    width: 288px;
+  }
 }
 
-.modal__header {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.content__container {
-  margin: 20px 20px 0 20px;
-}
-
-.modal__close-icon {
+.modal__close {
+  border: none;
   position: absolute;
-  top: 30px;
-  right: 26px;
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  background: url('/task/src/img/cross.svg') no-repeat center;
+  background-size: contain;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
-.modal__close-icon svg {
-  pointer-events: none;
+.modal.active ~ .card__wrapper {
+  filter: blur(8px);
+  @extend %transition;
 }
+
+.modal__prev,
+.modal__next {
+  background: none;
+  width: 57px;
+  height: 58px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  @extend %transition;
+
+  @include mixin.media-tablet {
+    width: 33px;
+    height: 33px;
+  }
+
+  @include mixin.media-mobile-large {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.modal__prev {
+  left: 10px;
+  background-image: url('/task/src/img/prev.svg');
+}
+
+.modal__next {
+  right: 10px;
+  background-image: url('/task/src/img/next.svg');
+}
+
+
+
