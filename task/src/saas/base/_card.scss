@@ -8,12 +8,14 @@
 }
 
 .card__wrapper {
+  position: relative;
   max-width: 1053px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   gap: 26px;
+  transition: filter 0.3s ease-in-out;
 
   @include mixin.media-small-tablet {
     gap: 0;
@@ -21,11 +23,15 @@
   }
 }
 
+.modal.active ~ .card__wrapper {
+  filter: blur(8px);
+}
+
 .card__item {
   background: constants.$color-content-background;
   cursor: pointer;
   flex: 0 1 auto;
-  margin: 10px;
+  margin: 8px;
 }
 
 .card__img {
