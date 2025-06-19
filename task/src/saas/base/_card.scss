@@ -1,10 +1,11 @@
 @use "../components/mixin";
 @use "../abstract/constants";
 
-.card {
+.cards {
   display: flex;
   justify-content: center;
-  margin-bottom: 147px;
+
+  padding-bottom: constants.$space-xxl;
 }
 
 .card__wrapper {
@@ -13,13 +14,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  gap: 26px;
+  margin-top: constants.$space-xl;
+  gap: constants.$space-l;
   transition: filter 0.3s ease-in-out;
 
   @include mixin.media-small-tablet {
     gap: 0;
-    margin-bottom: 16px;
+    margin-bottom: constants.$space-m;
   }
 }
 
@@ -31,7 +32,7 @@
   background: constants.$color-content-background;
   cursor: pointer;
   flex: 0 1 auto;
-  margin: 8px;
+  margin: constants.$space-s;
 }
 
 .card__img {

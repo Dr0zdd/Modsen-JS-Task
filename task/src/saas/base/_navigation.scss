@@ -1,4 +1,5 @@
+@use "../abstract/constants";
 
 .navigation__item {
-  padding: 29px 0 20px;
+  padding: constants.$space-xl 0 constants.$space-l;
 }
