@@ -48,6 +48,10 @@
   }
 }
 
+.search__btn {
+  all: unset;
+}
+
 .search__img {
   margin: 16px;
   cursor: pointer;
@@ -63,3 +67,4 @@
   border-radius: 16px;
   background-color: constants.$color-gray;
 }
+

@@ -32,18 +32,20 @@
     </div>
 </header>
 
-<!-- Search Section -->
 <section class="search">
     <div class="wrapper">
         <div class="search__wrapper">
             <h1 class="search__text">Let's Find Some <span class="search__text--unique">Images</span> Here!</h1>
             <div class="search__bar">
-                <input type="text" class="search__input" placeholder="Search High Resolution Images">
-                <img class="search__img" src="../src/img/search.svg" alt="">
+                <input type="text" id="searchInput" class="search__input" placeholder="Search High Resolution Images">
+                <button id="searchButton" class="search__btn" aria-label="Search Images">
+                    <img class="search__img" src="../src/img/search.svg" alt="Search">
+                </button>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Card Section -->
 <section class="cards">
@@ -132,6 +134,7 @@
 </footer>
 
 <script type="module" src="../src/js/gallery.js"></script>
+<script type="module" src="../src/js/search.js"></script>
 
 </body>
 </html>
