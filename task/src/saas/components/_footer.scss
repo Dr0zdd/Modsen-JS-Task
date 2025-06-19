@@ -3,12 +3,13 @@
 
 .footer {
   width: 100%;
-  margin-top: 60px;
-  padding: 80px 0;
+  margin-top: constants.$space-xxl;
+  padding: constants.$space-m 0;
+
   background: linear-gradient(to right, constants.$color-content-footer-background);
 
   @include mixin.media-mobile-large {
-    padding: 33px 0;
+    padding: constants.$space-xl 0;
   }
 
   @include mixin.media-mobile {
@@ -19,15 +20,16 @@
 .footer__wrapper {
   width: 100%;
   max-width: 1250px;
-  margin-left: 95px;
+  padding: constants.$space-xxl 0;
+  margin-left: constants.$space-xxl;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
 
   @include mixin.media-small-tablet {
+    padding: 0;
     flex-wrap: wrap;
-    padding-left: 0;
   }
 
   @include mixin.media-small-laptop {
@@ -35,23 +37,22 @@
   }
 
   @include mixin.media-mobile-large {
-    margin-left: 60px;
+    margin-left: constants.$space-xl
   }
 }
 
 .footer__info {
+  max-width: 340px;
+  margin-right: constants.$space-xxl;
   display: flex;
   flex-direction: column;
-  max-width: 340px;
-  margin-right: 85.6px;
   flex: 0 1 auto;
   align-items: flex-start;
   text-align: left;
 
   @include mixin.media-small-laptop {
-    width: 100%;
+    margin-bottom: constants.$space-l;
     flex: 1 1 100%;
-    margin-bottom: 20px;
   }
 }
 
@@ -75,7 +76,7 @@
 }
 
 .footer__title {
-  margin-bottom: 26px;
+  margin-bottom: constants.$space-l;
 
   @include mixin.media-mobile-large {
     display: inline;
@@ -83,19 +84,20 @@
 }
 
 .footer__list {
-  margin-bottom: 20px;
+  margin-bottom: constants.$space-l;
 }
 
 .footer__text-list {
-  padding-right: 85.6px;
+  padding-right: constants.$space-xxl;
+  margin-bottom: constants.$space-l;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 26px;
+
 
   @include mixin.media-small-laptop {
-    margin-bottom: 20px;
-    padding-right: 40px;
+    margin-bottom: constants.$space-l;
+    padding-right: constants.$space-xl;
   }
 
   &:first-child {
@@ -111,23 +113,23 @@
     margin-right: 0;
   }
 
-  @media (max-width: 1024px) {
-    flex: 1 1 auto;
+  @include mixin.media-small-laptop {
     min-width: 200px;
-    margin-bottom: 20px;
+    margin-bottom: constants.$space-l;
+    flex: 1 1 auto;
   }
 }
 
 .footer__icon {
-  margin-right: 12px;
+  margin-right: constants.$space-m;
 }
 
 .footer__extra {
-  padding: 30px 0 30px 75px;
+  padding: constants.$space-xl 0 constants.$space-xl constants.$space-xxl;
   text-align: left;
 
   @include mixin.media-mobile-large {
-    padding: 70px 0 0 22px;
+    padding: constants.$space-xxl 0 0 constants.$space-l;
     text-align: center;
   }
 }

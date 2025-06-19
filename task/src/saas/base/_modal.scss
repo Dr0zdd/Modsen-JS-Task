@@ -1,4 +1,5 @@
 @use "../abstract/placeholder";
+@use "../abstract/constants";
 @use "../components/mixin";
 
 .modal {
@@ -70,8 +71,8 @@
 .modal__close {
   border: none;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: constants.$space-s;
+  right: constants.$space-s;
   width: 14px;
   height: 14px;
   background: url('/task/src/img/cross.svg') no-repeat center;
@@ -90,15 +91,16 @@
 
 .modal__prev,
 .modal__next {
-  background: none;
   width: 57px;
   height: 58px;
+  padding: constants.$space-m;
+  background: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border: none;
   cursor: pointer;
-  padding: 12px;
+
   background-size: contain;
   @extend %transition;
 
@@ -114,12 +116,12 @@
 }
 
 .modal__prev {
-  left: 10px;
+  left: constants.$space-s;
   background-image: url('/task/src/img/prev.svg');
 }
 
 .modal__next {
-  right: 10px;
+  right: constants.$space-s;
   background-image: url('/task/src/img/next.svg');
 }
 

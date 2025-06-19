@@ -1,4 +1,5 @@
 @use "../components/mixin";
+@use "../abstract/constants";
 
 .header {
   width: 100%;
@@ -9,13 +10,14 @@
 .header__wrapper {
   max-width: 1149px;
   max-height: 80px;
-  padding: 21px 146px 8px 145px;
+  padding: constants.$space-l;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @include mixin.media-tablet {
-    padding: 0 8px;
+    padding: 0 constants.$space-s;
   }
 }
 
