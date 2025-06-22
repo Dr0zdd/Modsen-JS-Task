@@ -1,0 +1,8 @@
+@use "../abstract/constants" as c;
+
+$theme-pastel: (
+        color-bg: c.$color-bg-pastel,
+        color-bg-search-bar: c.$color-search-bar-pastel,
+        color-search-bar-text: c.$color-dark,
+        color-search-text: c.$color-dark,
+);

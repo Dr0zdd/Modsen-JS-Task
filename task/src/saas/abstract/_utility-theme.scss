@@ -1,0 +1,12 @@
+@use "sass:map";
+
+@mixin themed($property, $token) {
+  #{$property}: var(--#{$token});
+}
+
+
+@mixin export-theme($theme-map) {
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}

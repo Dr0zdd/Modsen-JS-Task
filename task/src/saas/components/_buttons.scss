@@ -1,0 +1,15 @@
+@use "../abstract/placeholder";
+
+[data-theme-toggler] {
+  display: flex;
+  justify-content: flex-end;
+  background: none;
+  cursor: pointer;
+  @extend %transition;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+}

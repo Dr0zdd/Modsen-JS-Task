@@ -1,0 +1,9 @@
+@use "../abstract/constants" as c;
+
+$theme-dark: (
+        color-bg: c.$color-bg-dark,
+        color-bg-search-bar: c.$color-search-surface-dark,
+        color-search-bar-text: c.$color-dark,
+        color-search-text: c.$color-search-text,
+        shadow-elevation: 0 4px 12px rgba(0, 0, 0, 0.3)
+);
