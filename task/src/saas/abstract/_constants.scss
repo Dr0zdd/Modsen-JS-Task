@@ -17,6 +17,14 @@ $color-gray: rgba(57, 57, 57, 0.05);
 $color-footer: rgba(255, 255, 255, 0.6);
 $color-search-text: rgba(196, 196, 196, 1);
 
+$color-bg-dark: rgb(30, 30, 30, 0.9);
+$color-search-surface-dark: rgb(253, 253, 253, 0.75);
+
+$color-bg-pastel: rgb(255, 240, 240);
+$color-search-bar-pastel: rgb(215 205 205);
+
+
+$shadow-card-dark: 0 4px 12px rgba(0, 0, 0, 0.4);
 
 $content-width: 1440px;
 $laptop-width: 1280px;
@@ -27,3 +35,8 @@ $mobile-large-width: 550px;
 $mobile-big-width: 425px;
 $mobile-medium-width: 380px;
 $mobile-small-width: 320px;
+
+$font-base: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;

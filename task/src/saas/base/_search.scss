@@ -1,19 +1,25 @@
 @use "../abstract/constants";
 @use "../components/mixin";
+@use "../abstract/utility-theme" as theme;
 
 .search {
-  margin-bottom: constants.$space-xxl;
+
+  @include theme.themed(background-color, color-bg);
+
+  padding-block: constants.$space-xxl;
 
   @include mixin.media-small-tablet {
-    margin-bottom: constants.$space-xl;
+    padding-bottom: constants.$space-xl;
   }
 
   @include mixin.media-mobile {
-    margin-bottom: 42px;
+    padding-bottom: constants.$space-xl;
   }
 }
 
 .search__text {
+  @include theme.themed(color, color-search-text);
+
   margin-top: 0;
   margin-bottom: constants.$space-xxl;
   text-align: center;
@@ -34,6 +40,8 @@
 .search__input {
   width: 100%;
   padding: constants.$space-l 0 constants.$space-l constants.$space-m;
+
+  @include theme.themed(color, color-search-bar-text);
 }
 
 .search__wrapper {
@@ -58,6 +66,8 @@
 }
 
 .search__bar {
+  @include theme.themed(background-color, color-bg-search-bar);
+
   display: flex;
   justify-content: space-between;
   height: 100%;
@@ -65,6 +75,5 @@
   max-width: 762px;
   margin-top: constants.$space-l;
   border-radius: 16px;
-  background-color: constants.$color-gray;
 }
 
