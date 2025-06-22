@@ -1,0 +1,12 @@
+@use "../abstract/constants" as c;
+
+$theme-light: (
+        color-bg: c.$color-content-background,
+        color-bg-search-bar: c.$color-gray,
+        color-search-bar-text: c.$color-search-text,
+        color-search-text: c.$color-dark
+);
+
+
+
+
