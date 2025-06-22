@@ -1,0 +1,18 @@
+@use "../abstract/constants" as c;
+@use "../abstract/utility-theme" as theme;
+@use "theme-light" as light;
+@use "theme-dark" as dark;
+@use "theme-pastel" as pastel;
+
+:root {
+  @include theme.export-theme(light.$theme-light);
+}
+
+[data-theme="dark"] {
+  @include theme.export-theme(dark.$theme-dark);
+}
+
+[data-theme="pastel"] {
+  @include theme.export-theme(pastel.$theme-pastel);
+}
+

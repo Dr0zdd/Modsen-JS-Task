@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -25,6 +25,10 @@
             <div class="header__logo">
                 <img class="logo__img" src="../src/img/logo.svg" alt="">
             </div>
+
+            <button data-theme-toggler aria-label="Change theme"></button>
+
+
             <nav class="navigation">
                 <h3 class="navigation__item">Gallery</h3>
             </nav>
@@ -37,7 +41,7 @@
         <div class="search__wrapper">
             <h1 class="search__text">Let's Find Some <span class="search__text--unique">Images</span> Here!</h1>
             <div class="search__bar">
-                <input type="text" id="searchInput" class="search__input" placeholder="Search High Resolution Images">
+                <input type="text" id="searchInput"  aria-label="Search Img" class="search__input" placeholder="Search High Resolution Images">
                 <button id="searchButton" class="search__btn" aria-label="Search Images">
                     <img class="search__img" src="../src/img/search.svg" alt="Search">
                 </button>
@@ -135,6 +139,7 @@
 
 <script type="module" src="../src/js/gallery.js"></script>
 <script type="module" src="../src/js/search.js"></script>
+<script type="module" src="../src/js/theme-manager.js"></script>
 
 </body>
 </html>
