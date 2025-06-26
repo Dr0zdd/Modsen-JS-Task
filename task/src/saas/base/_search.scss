@@ -77,3 +77,9 @@
   border-radius: 16px;
 }
 
+input.invalid {
+  border-radius: 16px;
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+

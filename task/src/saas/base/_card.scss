@@ -32,11 +32,11 @@
 }
 
 .card__item {
-  box-shadow: var(--shadow-elevation, none);
-
   margin: constants.$space-s;
-  cursor: pointer;
+
+  box-shadow: var(--shadow-elevation, none);
   flex: 0 1 auto;
+  cursor: pointer;
 }
 
 .card__img {
