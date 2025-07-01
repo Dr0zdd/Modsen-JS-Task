@@ -1,4 +1,4 @@
-import{g as c,I as i,c as o}from"./theme-manager-BevC-u2S.js";document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".card__wrapper"),r=c();if(e){if(!r.length){e.innerHTML=`
+import{g as c,I as i,c as o}from"./theme-manager-BIV85BDx.js";document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".card__wrapper"),r=c();if(e){if(!r.length){e.innerHTML=`
       <div class="no-results">
         <p>You haven’t saved any images yet.</p>
         <a href="index.html" class="back-to-gallery">← Go to Gallery</a>
