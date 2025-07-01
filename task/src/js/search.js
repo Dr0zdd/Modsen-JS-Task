@@ -42,3 +42,4 @@ async function logImageDetails() {
         console.log(`${index + 1}. ID: ${id} | Slug: ${slug}`)
     );
 }
+    
