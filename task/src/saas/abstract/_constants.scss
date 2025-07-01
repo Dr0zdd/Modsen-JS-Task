@@ -1,3 +1,4 @@
+// Spacing
 $space-xxs: 2px;
 $space-xs: 4px;
 $space-s: 8px;
@@ -6,27 +7,27 @@ $space-l: 24px;
 $space-xl: 32px;
 $space-xxl: 64px;
 
-$color-primary: rgba(255, 255, 255, 0.6);
-$color-content-background: rgba(255, 255, 255, 1);
-$color-content-footer-background: ((rgba(52, 51, 51, 1), rgba(72, 72, 72, 1), rgba(40, 40, 40, 1)));
-$color-text: rgba(255, 253, 250, 1);
-$color-orange-primary: rgba(224, 164, 73, 1);
-$color-orange-h1: rgba(241, 121, 0, 1);
-$color-dark: rgba(0, 0, 0, 1);
-$color-gray: rgba(57, 57, 57, 0.05);
-$color-footer: rgba(255, 255, 255, 0.6);
-$color-search-text: rgba(196, 196, 196, 1);
-
-$color-bg-dark: rgb(30, 30, 30, 0.9);
-$color-search-surface-dark: rgb(253, 253, 253, 0.75);
-
-$color-bg-pastel: rgb(255, 240, 240);
-$color-search-bar-pastel: rgb(215 205 205);
-
-
-$shadow-card-dark: 0 4px 12px rgba(0, 0, 0, 0.4);
-
+// Layout
 $content-width: 1440px;
+$container-header: 1150px;
+$card-wrapper-max: 1050px;
+$footer-wrapper-max: 1250px;
+$footer-info-max: 340px;
+$footer-column-min: 340px;
+$footer-text-list-first-max: 265px;
+$footer-text-list-min: 200px;
+$search-wrapper-max: 760px;
+$search-wrapper-max-height: 300px;
+$search-min-height: 64px;
+$border-radius-search: 16px;
+
+// Typography
+$font-base: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+
+// Breakpoints
 $laptop-width: 1280px;
 $small-laptop-width: 1024px;
 $tablet-width: 768px;
@@ -36,7 +37,51 @@ $mobile-big-width: 425px;
 $mobile-medium-width: 380px;
 $mobile-small-width: 320px;
 
-$font-base: 'Roboto', sans-serif;
-$font-size-base: 16px;
-$font-size-sm: 14px;
-$font-size-lg: 18px;
+// Colors
+$color-primary: rgba(255, 255, 255, 0.6);
+$color-content-background: rgba(255, 255, 255, 1);
+$color-content-footer-background: linear-gradient(to right, rgba(52, 51, 51, 1), rgba(72, 72, 72, 1), rgba(40, 40, 40, 1));
+$color-text: rgba(255, 253, 250, 1);
+$color-orange-primary: rgba(224, 164, 73, 1);
+$color-orange-h1: rgba(241, 121, 0, 1);
+$color-dark: rgba(0, 0, 0, 1);
+$color-gray: rgba(57, 57, 57, 0.05);
+$color-footer: rgba(255, 255, 255, 0.6);
+$color-search-text: rgba(196, 196, 196, 1);
+$color-bg-dark: rgb(30, 30, 30, 0.9);
+$color-search-surface-dark: rgb(253, 253, 253, 0.75);
+$color-bg-pastel: rgb(255, 240, 240);
+$color-search-bar-pastel: rgb(215, 205, 205);
+$color-error: rgb(229, 57, 53);
+$color-error-bg: rgba(255, 205, 210, 0.5);
+
+// Effects
+$shadow-card-dark: 0 4px 12px rgba(0, 0, 0, 0.4);
+$blur-on-modal: 8px;
+
+// Modal sizes
+$modal-width: 1100px;
+$modal-height: 540px;
+$modal-img-width: 720px;
+$modal-img-height: 540px;
+$modal-img-width-small-laptop: 510px;
+$modal-img-height-small-laptop: 380px;
+$modal-img-width-tablet: 435px;
+$modal-img-height-tablet: 320px;
+$modal-img-width-mobile-large: 325px;
+$modal-img-height-mobile-large: 250px;
+$modal-img-width-mobile: 290px;
+
+// Card sizes
+$card-img-width: 310px;
+$card-img-height: 340px;
+$card-img-width-small: 350px;
+$card-img-height-mobile: 180px;
+
+// Icons & Buttons
+$arrow-width-default: 60px;
+$arrow-height-default: 60px;
+$arrow-size-responsive: 30px;
+$close-btn-size: 14px;
+$icon-size-md: 24px;
+$icon-size-lg: 40px;
