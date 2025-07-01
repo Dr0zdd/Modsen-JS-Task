@@ -20,7 +20,7 @@ vcs.xml
 watcherTasks.xml
 
 # Игнорируем локальный конфиг
-task/src/js/config.js
+../task/src/js/config.js
 
 task/src/img/[1-12].svg
 
