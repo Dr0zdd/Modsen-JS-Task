@@ -16,3 +16,27 @@
   @include theme.export-theme(pastel.$theme-pastel);
 }
 
+.theme-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: c.$space-s;
+  z-index: 10;
+
+  list-style: none;
+  padding: 0;
+  color: c.$color-orange-primary;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.2s ease;
+}
+
+.theme-list.hidden {
+  display: none;
+}
+
+.theme-list li {
+  padding: c.$space-s;
+  cursor: pointer;
+}
+

@@ -1,28 +1,36 @@
 @use "../components/mixin";
-@use "../abstract/constants";
+@use "../abstract/constants" as c;
 
 .header {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 109px;
-  background: linear-gradient(to right, rgba(52, 51, 51, 1), rgba(72, 72, 72, 1), rgba(40, 40, 40, 1));
+  height: 100%;
+  background: c.$color-content-footer-background;
 }
 
 .header__wrapper {
-  max-width: 1149px;
-  max-height: 80px;
-  padding: constants.$space-l;
   margin: 0 auto;
+  padding: 0;
+  padding-inline: c.$space-xl;
+  width: 100%;
+  height: 100%;
+  max-width: c.$container-header;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
-  @include mixin.media-tablet {
-    padding: 0 constants.$space-s;
-  }
 }
 
 .header__logo {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mixin.media-small-tablet {
+    flex: 0 0 100%;
+    padding-top: c.$space-m;
+  }
 }

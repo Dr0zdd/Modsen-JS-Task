@@ -13,7 +13,7 @@ async function loadGallery(query = 'nature') {
 }
 
 export async function getApiImages() {
-    return apiImages.length ? apiImages : await fetchImages('nature'); // Возвращает загруженные или запрашивает новые изображения
+    return apiImages.length ? apiImages : await fetchImages('nature');
 }
 
 export function renderImages(images) {
@@ -26,7 +26,7 @@ export function renderImages(images) {
                 <img class="card__img" src="${image.urls.regular}" alt="${image.alt_description || 'Без описания'}">
             </article>
         `).join('')
-        : '<p class="no-results">Изображения не найдены</p>'; // Показываем сообщение при пустом списке
+        : '<p class="no-results">Изображения не найдены</p>';
 }
 
 function openModal(imageId) {
@@ -35,7 +35,7 @@ function openModal(imageId) {
     document.querySelector('.modal')?.remove();
 
     const currentIndex = apiImages.findIndex(img => img.id === imageId);
-    if (currentIndex === -1) return; // Защита от ошибки
+    if (currentIndex === -1) return;
 
     const modal = new ImageSliderModal(apiImages.map(img => img.urls.regular), currentIndex);
     modal.buildModal();
@@ -53,7 +53,7 @@ function openModal(imageId) {
 document.querySelector('.card__wrapper')?.addEventListener('click', (e) => {
     const card = e.target.closest('.card__item');
     if (card) {
-        openModal(card.dataset.id); // Передаём ID изображения для поиска
+        openModal(card.dataset.id);
     }
 });
 

@@ -1,15 +1,48 @@
 @use "../abstract/placeholder";
+@use "../abstract/constants" as c;
 
 [data-theme-toggler] {
+  margin: 0;
+  padding: 0;
+  background: none;
   display: flex;
   justify-content: flex-end;
-  background: none;
   cursor: pointer;
   @extend %transition;
 
   img {
-    width: 24px;
-    height: 24px;
+    width: c.$icon-size-md;
+    height: c.$icon-size-md;
   }
+}
 
+.modal__fav-btn {
+  margin: 0;
+  padding: c.$space-xs;
+  width: c.$icon-size-lg;
+  height: c.$icon-size-lg;
+  background: transparent;
+  position: absolute;
+  right: -6rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal__fav-btn.clicked {
+  transform: scale(1.2);
+}
+
+.clear-favorites {
+  margin: 0;
+  padding: 0;
+  width: c.$icon-size-md;
+  height: c.$icon-size-md;
+  background-image: url('../img/xmark-solid.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

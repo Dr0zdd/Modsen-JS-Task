@@ -26,12 +26,18 @@
                 <img class="logo__img" src="../src/img/logo.svg" alt="">
             </div>
 
-            <button data-theme-toggler aria-label="Change theme"></button>
+            <div class="theme-toggle-wrapper" style="position: relative;">
+                <button data-theme-toggler aria-label="Change theme"></button>
+                <ul class="theme-list hidden">
+                    <li data-theme-option="light">Light</li>
+                    <li data-theme-option="dark">Dark</li>
+                    <li data-theme-option="pastel">Pastel</li>
+                </ul>
+            </div>
 
-
-            <nav class="navigation">
-                <h3 class="navigation__item">Gallery</h3>
-            </nav>
+            <h3>
+                <a class="navigation__item" href="favorites.html">Go To Favorites</a>
+            </h3>
         </div>
     </div>
 </header>
@@ -140,6 +146,7 @@
 <script type="module" src="../src/js/gallery.js"></script>
 <script type="module" src="../src/js/search.js"></script>
 <script type="module" src="../src/js/theme-manager.js"></script>
+<script type="module" src="../src/js/favoritesStorage.js"></script>
 
 </body>
 </html>

@@ -1,28 +1,28 @@
-@use "../abstract/constants";
+@use "../abstract/constants" as c;
 @use "../components/mixin";
 @use "../abstract/utility-theme" as theme;
 
 .search {
-
+  margin: 0;
+  padding: 0;
+  padding-block: c.$space-xxl;
   @include theme.themed(background-color, color-bg);
 
-  padding-block: constants.$space-xxl;
-
   @include mixin.media-small-tablet {
-    padding-bottom: constants.$space-xl;
+    padding-bottom: c.$space-xl;
   }
 
   @include mixin.media-mobile {
-    padding-bottom: constants.$space-xl;
+    padding-bottom: c.$space-xl;
   }
 }
 
 .search__text {
-  @include theme.themed(color, color-search-text);
-
+  margin: 0;
   margin-top: 0;
-  margin-bottom: constants.$space-xxl;
+  margin-bottom: c.$space-xxl;
   text-align: center;
+  @include theme.themed(color, color-search-text);
 
   @include mixin.media-tablet {
     font-size: 4.2rem;
@@ -34,22 +34,22 @@
 }
 
 .search__text--unique {
-  color: constants.$color-orange-primary;
+  color: c.$color-orange-primary;
 }
 
 .search__input {
   width: 100%;
-  padding: constants.$space-l 0 constants.$space-l constants.$space-m;
-
+  padding: c.$space-l 0 c.$space-l c.$space-m;
   @include theme.themed(color, color-search-bar-text);
 }
 
 .search__wrapper {
-  max-width: 762px;
-  height: 100%;
-  max-height: 296px;
   margin: 0 auto;
-  padding-top: constants.$space-xxl;
+  padding: 0;
+  padding-top: c.$space-xxl;
+  max-width: c.$search-wrapper-max;
+  max-height: c.$search-wrapper-max-height;
+  height: 100%;
 
   @include mixin.media-tablet {
     max-width: 90%;
@@ -61,19 +61,24 @@
 }
 
 .search__img {
-  margin: constants.$space-m;
+  margin: c.$space-m;
   cursor: pointer;
 }
 
 .search__bar {
-  @include theme.themed(background-color, color-bg-search-bar);
-
+  margin: 0;
+  margin-top: c.$space-l;
+  padding: 0;
+  border-radius: c.$border-radius-search;
+  height: 100%;
+  min-height: c.$search-min-height;
+  max-width: c.$search-wrapper-max;
   display: flex;
   justify-content: space-between;
-  height: 100%;
-  min-height: 64px;
-  max-width: 762px;
-  margin-top: constants.$space-l;
-  border-radius: 16px;
+  @include theme.themed(background-color, color-bg-search-bar);
 }
 
+.search__input.invalid {
+  background: c.$color-error-bg;
+  border: 2px solid c.$color-error;
+}
