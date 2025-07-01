@@ -1,0 +1,26 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+*.png
+*.xml
+
+# Игнорируем node_modules
+node_modules/
+
+# Игнорируем IDE-файлы
+*.iml
+modules.xml
+vcs.xml
+watcherTasks.xml
+
+# Игнорируем локальный конфиг
+../task/src/js/config.js
+
+task/src/img/[1-12].svg
+
