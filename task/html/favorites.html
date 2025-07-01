@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Favorites Images</title>
+    <link rel="stylesheet" href="../src/saas/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img class="logo__img" src="../src/img/logo.svg" alt="">
+            </div>
+
+            <div class="theme-toggle-wrapper" style="position: relative;">
+                <button data-theme-toggler aria-label="Change theme"></button>
+                <ul class="theme-list hidden">
+                    <li data-theme-option="light">Light</li>
+                    <li data-theme-option="dark">Dark</li>
+                    <li data-theme-option="pastel">Pastel</li>
+                </ul>
+            </div>
+
+            <button class="clear-favorites"></button>
+
+            <h3 class="navigation">
+                <a class="navigation__item" href="index.html">Gallery</a>
+            </h3>
+        </div>
+    </div>
+</header>
+
+<!-- Card Section -->
+<section class="cards">
+    <div class="layout-3-column card__column">
+        <div class="wrapper">
+            <div class="card__wrapper">
+                <div class="modal__overlay">
+                    <div class="modal__content">
+                        <button class="modal__close">;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="../src/js/theme-manager.js"></script>
+<script type="module" src="../src/js/favoritesStorage.js"></script>
+<script type="module" src="../src/js/favorites.js"></script>
+
+</body>
+</html>

@@ -6,12 +6,51 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
   width: 100%;
+  font-size: 1.6rem;
 }
 
 h1 {
   @include mixin.font(6.4rem, 100%, 700, 0, none);
+}
+
+h3 {
+  @include mixin.font(2.4rem, 100%, 400, 0, none);
+  color: constants.$color-text;
+
+  a {
+    color: constants.$color-text;
+    text-decoration: none;
+  }
+}
+
+p {
+  @include mixin.font(1.6rem, 2.368rem, 400, 0, none);
+}
+
+a {
+  color: constants.$color-dark;
+  text-decoration: none;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
 }
 
 .search__input {
@@ -29,42 +68,7 @@ h1 {
   color: constants.$color-footer;
 }
 
-
 .footer__text-list {
   @include mixin.font(2rem, 1.9rem, 400, 0, none);
   color: constants.$color-footer;
-}
-
-h3 {
-  @include mixin.font(2.4rem, 100%, 400, 0, none);
-  color: constants.$color-text;
-}
-
-p {
-  @include mixin.font(1.6rem, 2.368rem, 400, 0, none)
-}
-
-a {
-  text-decoration: none;
-  color: constants.$color-dark;
-}
-
-input {
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding: 0;
-  margin: 0;
 }
